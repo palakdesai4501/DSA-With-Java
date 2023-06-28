@@ -3,8 +3,8 @@
 public class binary1 {
 
     public static void main(String[] args) {
-        int arr[] = {-18, -10, -8, -4, -2, 0, 2, 3, 6, 10, 13, 16};
-        // int arr[] = { 45, 23, 10, 5, 0, -2, -11, -20, -34, -46, -67, };
+        // int arr[] = {-18, -10, -8, -4, -2, 0, 2, 3, 6, 10, 13, 16};
+        int arr[] = { 45, 23, 10, 5, 0, -2, -11, -20, -34, -46, -67, };
         int target = -20;
         int ans = orderAgnosticsBS(arr, target);
         System.out.println(ans);
