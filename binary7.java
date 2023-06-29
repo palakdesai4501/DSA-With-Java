@@ -13,6 +13,12 @@ public class binary7 {
         int end = arr.length - 1;
 
         while (start < end) {
+
+            /**
+             * find the middle element
+             * int mid = (start+end)/2;
+             * might be possible that (s+e)/2 exeeds the range of integer in java
+             */
             int mid = start + (end - start) / 2;
             if (arr[mid] > arr[mid + 1]) {
                 /**

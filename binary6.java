@@ -29,8 +29,11 @@ public class binary6 {
     static int binarySearch(int[] arr, int target, int start, int end){
 
         while(start <= end){
-            //find the middle element
-            //int mid = (start+end)/2; // might be possible that (s+e)/2 exeeds the range  of integer in java
+          /**
+             * find the middle element
+             * int mid = (start+end)/2;
+             * might be possible that (s+e)/2 exeeds the range of integer in java
+             */
             int mid = start + (end-start)/2;
 
             if(target<arr[mid]){
