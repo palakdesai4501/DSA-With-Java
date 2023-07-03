@@ -1,5 +1,4 @@
-//binary search in 2D array
-
+// Binary Search in 2D Array
 import java.util.Arrays;
 
 public class binary11 {
@@ -14,6 +13,12 @@ public class binary11 {
         System.out.println(Arrays.toString(search(arr, 37)));
     }
 
+    /**
+     * 
+     * @param matrix
+     * @param target
+     * @return index of target element
+     */
     static int[] search(int[][] matrix, int target){
         int r=0;
         int c=matrix.length-1;

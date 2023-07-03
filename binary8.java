@@ -1,4 +1,5 @@
-//find target element in mountain array
+// Find target element in a mountain array
+
 public class binary8 {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,3,1};
@@ -8,6 +9,11 @@ public class binary8 {
 
     }
 
+    /**
+     * @param arr
+     * @param target
+     * @return index of target, if not found return -1
+     */
     static int search(int[] arr, int target) {
         int peak = peakIndexInMountainArray(arr);
         int firstTry = orderAgnosticsBS(arr, target,0, peak);
@@ -18,16 +24,20 @@ public class binary8 {
         return orderAgnosticsBS(arr, target, peak+1, arr.length -1);
     }
 
+    /**
+     * 
+     * @param arr
+     * @return index of peak element
+     */
     public static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 
         while (start < end) {
-            /**
-             * find the middle element
-             * int mid = (start+end)/2;
-             * might be possible that (s+e)/2 exeeds the range of integer in java
-             */
+
+            // find the middle element
+            // int mid = (start+end)/2;
+            // might be possible that (s+e)/2 exeeds the range of integer in java
             int mid = start + (end - start) / 2;
             if (arr[mid] > arr[mid + 1]) {
                 end = mid;
@@ -38,6 +48,14 @@ public class binary8 {
         return start;
     }
 
+    /**
+     * 
+     * @param arr
+     * @param target
+     * @param start
+     * @param end
+     * @return index of target element
+     */
     static int orderAgnosticsBS(int[] arr, int target, int start, int end) {
 
         // find whether the array is sorted in ascending or descending order

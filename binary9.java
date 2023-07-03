@@ -1,4 +1,5 @@
-//search in rotated sorted array(for distinct values)
+// Program to search an element in a sorted and rotated array using Binary Search
+
 public class binary9 {
     public static void main(String[] args) {
         int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
@@ -13,6 +14,12 @@ public class binary9 {
 
     }
 
+    /**
+     * 
+     * @param nums
+     * @param target
+     * @return index of target element
+     */
     static int search(int[] nums, int target) {
         int pivot = findPivot(nums);
 
@@ -35,14 +42,21 @@ public class binary9 {
 
     }
 
+    /**
+     * 
+     * @param arr
+     * @param target
+     * @param start
+     * @param end
+     * @return index of target element
+     */
     static int binarySearch(int[] arr, int target, int start, int end) {
 
         while (start <= end) {
-           /**
-             * find the middle element
-             * int mid = (start+end)/2;
-             * might be possible that (s+e)/2 exeeds the range of integer in java
-             */
+
+            // find the middle element
+            // int mid = (start+end)/2;
+            // might be possible that (s+e)/2 exeeds the range of integer in java
             int mid = start + (end - start) / 2;
 
             if (target < arr[mid]) {
@@ -56,6 +70,11 @@ public class binary9 {
         return -1;
     }
 
+    /**
+     * 
+     * @param arr
+     * @return index of pivot element
+     */
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -78,6 +97,11 @@ public class binary9 {
         return -1;
     }
 
+    /**
+     * 
+     * @param arr
+     * @return index of pivot element
+     */
     static int findPivotWithDuplicates(int[] arr) {
         int start = 0;
         int end = arr.length - 1;

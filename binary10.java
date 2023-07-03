@@ -1,11 +1,16 @@
-//minimum largest sum in a split array
-
+// Minimum largest sum of a split array
 public class binary10 {
     public static void main(String[] args) {
         int[] nums={7,2,5,10,8};
         System.out.println(splitArray(nums, 2));
     }
 
+    /**
+     * 
+     * @param nums
+     * @param m
+     * @return minimum largest sum of a split array
+     */
     static int splitArray(int[] nums, int m){
         int start = 0;
         int end =0;
