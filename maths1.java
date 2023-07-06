@@ -7,6 +7,11 @@ public class maths1 {
         System.out.println(isOdd(n));
     }
 
+    /**
+     * 
+     * @param n
+     * @return true if odd else false
+     */
     static boolean isOdd(int n){
         return (n & 1)==1;
     }
