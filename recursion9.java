@@ -1,5 +1,4 @@
 //reverse a number - way 1
-
 public class recursion9 {
     public static void main(String[] args) {
         reverse1(1234);
