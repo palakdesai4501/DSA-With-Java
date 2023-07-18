@@ -6,6 +6,14 @@ public class recursion2 {
         System.out.println(search(arr, target, 0, arr.length-1));
     }
 
+    /**
+     * 
+     * @param arr
+     * @param target
+     * @param s
+     * @param e
+     * @return index of target in arr
+     */
     static int search(int[] arr, int target, int s, int e){
 
         if(s > e){ 
