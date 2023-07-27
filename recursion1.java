@@ -7,7 +7,7 @@ public class recursion1 {
     }
 
     /**
-     * This is the formula for calculating the nth fibonacci number
+     * This is the formula for calculating the nth fibonacci number using the golden ratio
      * @param n
      * @return nth fibonacci number
      */

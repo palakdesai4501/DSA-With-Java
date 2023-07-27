@@ -5,11 +5,10 @@ public class recursion8 {
         System.out.println(ans);
     }
 
-    static int prod(int n){
-        if(n%10==n){
+    static int prod(int n) {
+        if (n % 10 == n) {
             return n;
         }
-
-        return (n%10) * prod(n/10);
+        return (n % 10) * prod(n / 10);
     }
 }

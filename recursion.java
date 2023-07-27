@@ -1,6 +1,6 @@
-//introduction to recursion
-//write a function that takes in a number and prints it
-//print first 5 numbers: 1 2 3 4 5  
+// Introduction to recursion
+// Write a function that takes in a number and prints it
+// Print first 5 numbers: 1 2 3 4 5  
 public class recursion {
     public static void main(String[] args) {
         print1(1);
