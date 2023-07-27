@@ -1,6 +1,6 @@
 // Skip character in a string 
-// input: baccdah
-// output: bcdh
+// Input: baccdah
+// Output: bcdh
 public class recursion20 {
     public static void main(String[] args) {
         System.out.println(skip("baccdah"));
@@ -8,6 +8,7 @@ public class recursion20 {
 
     /**
      * skip character in a string
+     * 
      * @param p
      * @param up
      */
@@ -27,6 +28,7 @@ public class recursion20 {
 
     /**
      * skip character in a string
+     * 
      * @param up
      * @return
      */
@@ -37,7 +39,7 @@ public class recursion20 {
 
         char ch = up.charAt(0);
         if (ch == 'a') {
-           return skip(up.substring(1));
+            return skip(up.substring(1));
         } else {
             return ch + skip(up.substring(1));
         }

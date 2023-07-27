@@ -15,7 +15,7 @@ public class recursion15 {
         // findAllIndex(arr, 4, 0);
         // System.out.println(list);
         // System.out.println(findAllIndex(arr, 4, 0, new ArrayList<>()));
-         System.out.println(findAllIndex2(arr, 4, 0));
+        System.out.println(findAllIndex2(arr, 4, 0));
     }
 
     static boolean find(int[] arr, int target, int index) {
@@ -48,8 +48,8 @@ public class recursion15 {
         }
     }
 
-
     static ArrayList<Integer> list = new ArrayList<>();
+
     static void findAllIndex(int[] arr, int target, int index) {
         if (index == arr.length) {
             return;
@@ -57,39 +57,35 @@ public class recursion15 {
         if (arr[index] == target) {
             list.add(index);
         }
-        findAllIndex(arr, target, index+1);
+        findAllIndex(arr, target, index + 1);
     }
 
-    static ArrayList<Integer> findAllIndex(int[] arr, int target, int index, ArrayList<Integer> list ) {
+    static ArrayList<Integer> findAllIndex(int[] arr, int target, int index, ArrayList<Integer> list) {
         if (index == arr.length) {
             return list;
         }
         if (arr[index] == target) {
             list.add(index);
         }
-        return findAllIndex(arr, target, index+1, list);
+        return findAllIndex(arr, target, index + 1, list);
     }
 
     static ArrayList<Integer> findAllIndex2(int[] arr, int target, int index) {
 
-         ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
 
         if (index == arr.length) {
             return list;
         }
 
-        //this will contain answer for that function call only
+        // this will contain answer for that function call only
         if (arr[index] == target) {
             list.add(index);
         }
-        ArrayList<Integer> ansFromBelowCalls = findAllIndex2(arr, target, index+1);
+        ArrayList<Integer> ansFromBelowCalls = findAllIndex2(arr, target, index + 1);
 
         list.addAll(ansFromBelowCalls);
 
         return list;
     }
-
-
 }
-
-

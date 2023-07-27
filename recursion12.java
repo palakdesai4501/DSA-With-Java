@@ -1,4 +1,4 @@
-//Count number of zeros in a number 
+// Count number of zeros in a number 
 public class recursion12 {
     public static void main(String[] args) {
         System.out.println(count(1300200));

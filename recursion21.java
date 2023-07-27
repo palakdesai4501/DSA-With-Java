@@ -1,10 +1,10 @@
-//Skip a string if it starts with app but not apple
-//input: bappccapplegh
-//output: bccapplegh
+// Skip a string if it starts with app but not apple
+// Input: bappccapplegh
+// Output: bccapplegh
 
-//Skip a string with apple removed from it
-//input: bccapplegh
-//output: bccgh
+// Skip a string with apple removed from it
+// Input: bccapplegh
+// Output: bccgh
 public class recursion21 {
     public static void main(String[] args) {
         System.out.println(skipAppNotApple("bappccapplegh"));

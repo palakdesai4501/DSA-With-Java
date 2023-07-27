@@ -7,7 +7,7 @@ public class recursion26 {
     public static void main(String[] args) {
         dice("", 4);
         System.out.println(diceRet("", 4));
-        
+
     }
 
     /**
@@ -15,13 +15,13 @@ public class recursion26 {
      * @param p
      * @param target
      */
-    static void dice(String p, int target){
-        if(target == 0){
+    static void dice(String p, int target) {
+        if (target == 0) {
             System.out.println(p);
             return;
         }
 
-        for(int i = 1; i <=6 && i<=target; i++){
+        for (int i = 1; i <= 6 && i <= target; i++) {
             dice(p + i, target - i);
         }
     }
@@ -31,15 +31,15 @@ public class recursion26 {
      * @param p
      * @param target
      * @param face
-     * @return 
+     * @return
      */
-    static void diceFace(String p, int target, int face){
-        if(target == 0){
+    static void diceFace(String p, int target, int face) {
+        if (target == 0) {
             System.out.println(p);
             return;
         }
 
-        for(int i = 1; i <=face && i<=target; i++){
+        for (int i = 1; i <= face && i <= target; i++) {
             diceFace(p + i, target - i, face);
         }
     }
@@ -50,16 +50,16 @@ public class recursion26 {
      * @param target
      * @return arraylist of all dice rolls with target sum
      */
-    static ArrayList<String> diceRet(String p, int target){
-        if(target == 0){
-           ArrayList<String> list = new ArrayList<>();
+    static ArrayList<String> diceRet(String p, int target) {
+        if (target == 0) {
+            ArrayList<String> list = new ArrayList<>();
             list.add(p);
             return list;
         }
 
         ArrayList<String> list = new ArrayList<>();
 
-        for(int i = 1; i <=6 && i<=target; i++){
+        for (int i = 1; i <= 6 && i <= target; i++) {
             list.addAll(diceRet(p + i, target - i));
         }
         return list;
@@ -70,22 +70,21 @@ public class recursion26 {
      * @param p
      * @param target
      * @param face
-     * @return 
+     * @return
      */
-    static ArrayList<String> diceFaceRet(String p, int target, int face){
-        if(target == 0){
-           ArrayList<String> list = new ArrayList<>();
+    static ArrayList<String> diceFaceRet(String p, int target, int face) {
+        if (target == 0) {
+            ArrayList<String> list = new ArrayList<>();
             list.add(p);
             return list;
         }
 
         ArrayList<String> list = new ArrayList<>();
 
-        for(int i = 1; i <=6 && i<=target; i++){
+        for (int i = 1; i <= 6 && i <= target; i++) {
             list.addAll(diceFaceRet(p + i, target - i, face));
         }
         return list;
     }
 
-    
 }

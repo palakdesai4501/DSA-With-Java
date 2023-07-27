@@ -1,6 +1,6 @@
-//Iterative approach to find all the subsets of a given array
-//Time Complexity: O(n*2^n)
-//Space Complexity: O(n*2^n)
+// Iterative approach to find all the subsets of a given array
+// Time Complexity: O(n*2^n)
+// Space Complexity: O(n*2^n)
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,7 +38,7 @@ public class recursion23 {
     /**
      *
      * @param arr
-     * @return 
+     * @return
      */
     static List<List<Integer>> subsetDuplicate(int[] arr) {
         Arrays.sort(arr);
@@ -48,8 +48,8 @@ public class recursion23 {
         int end = 0;
         for (int i = 0; i < arr.length; i++) {
             start = 0;
-            // if current and previous element is same, s = e + 1 
-            if(i > 0 && arr[i] == arr[i-1]){
+            // if current and previous element is same, s = e + 1
+            if (i > 0 && arr[i] == arr[i - 1]) {
                 start = end + 1;
             }
             end = outer.size() - 1;
