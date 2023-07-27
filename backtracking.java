@@ -1,6 +1,5 @@
 // Count the number of paths from top left to bottom right of a m*n matrix
 import java.util.ArrayList;
-
 public class backtracking {
     public static void main(String[] args) {
         // System.out.println(count(3, 3));
