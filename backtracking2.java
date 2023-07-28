@@ -19,7 +19,6 @@ public class backtracking2 {
             System.out.println();
             return 1;
         }
-
         int count = 0;
 
         // placing the queen and checking for every row and col
