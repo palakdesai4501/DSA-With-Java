@@ -8,7 +8,6 @@
 // time complexity: o(N^3 + N!) = o(N!)
 public class backtracking2 {
     public static void main(String[] args) {
-        int n = 4;
         boolean[][] board = new boolean[4][4];
         System.out.println(queens(board, 0));
     }
