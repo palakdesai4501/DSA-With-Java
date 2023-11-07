@@ -45,10 +45,25 @@ public class BST {
         return node;
     }
 
+    public boolean isEmpty() {
+        return root == null;
+    }
+
     public int height(Node node) {
         if (node == null) {
-          return -1;
+            return -1;
         }
         return node.height;
-      }
+    }
+
+    public boolean balanced() {
+        return balanced(root);
+    }
+
+    private boolean balanced(Node node) {
+        if (node == null) {
+            return true;
+        }
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
+    }
 }
