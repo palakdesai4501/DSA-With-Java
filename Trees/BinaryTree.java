@@ -8,7 +8,7 @@ public class BinaryTree {
     public BinaryTree() {
 
     }
-    
+
     // this is a constructor
     private static class Node {
         public int value;
@@ -22,7 +22,7 @@ public class BinaryTree {
 
     private Node root;
 
-    // insert elements 
+    // insert elements
     // 1. if root is null, insert at root
     // 2. if root is not null, insert at left or right of root
     public void populate(Scanner scanner) {
@@ -87,13 +87,12 @@ public class BinaryTree {
         prettyDisplay(node.left, level + 1);
     }
 
-    
-    public void preOrder(){
+    public void preOrder() {
         preOrder(root);
     }
 
-    private void preOrder(Node node){
-        if(node==null){
+    private void preOrder(Node node) {
+        if (node == null) {
             return;
         }
         System.out.println(node.value + " ");
@@ -101,12 +100,12 @@ public class BinaryTree {
         preOrder(node.right);
     }
 
-    public void inOrder(){
+    public void inOrder() {
         inOrder(root);
     }
 
-    private void inOrder(Node node){
-        if(node==null){
+    private void inOrder(Node node) {
+        if (node == null) {
             return;
         }
 
@@ -115,15 +114,15 @@ public class BinaryTree {
         inOrder(node.right);
     }
 
-    public void postOrder(){
+    public void postOrder() {
         postOrder(root);
     }
 
-    private void postOrder(Node node){
-        if(node==null){
+    private void postOrder(Node node) {
+        if (node == null) {
             return;
         }
-        
+
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.value + " ");
