@@ -9,5 +9,6 @@ public class main1 {
         BinaryTree tree = new BinaryTree();
         tree.populate(scanner);
         tree.prettyDisplay();
+        tree.preOrder();
     }
 }
