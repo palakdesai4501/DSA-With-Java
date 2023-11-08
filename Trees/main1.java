@@ -10,5 +10,6 @@ public class main1 {
         tree.populate(scanner);
         tree.prettyDisplay();
         tree.preOrder();
+        tree.inOrder();
     }
 }
