@@ -11,5 +11,6 @@ public class main1 {
         tree.prettyDisplay();
         tree.preOrder();
         tree.inOrder();
+        tree.postOrder();
     }
 }
