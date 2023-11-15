@@ -41,9 +41,12 @@ public class AVL {
     }
 
     node.height = Math.max(height(node.left), height(node.right)) + 1;
-    return node;
+    return rotate(node);
   }
 
+  private  Node rotate(Node node){
+    
+  }
   public void populate(int[] nums) {
     for (int i = 0; i < nums.length; i++) {
       this.insert(nums[i]);
