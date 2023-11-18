@@ -51,6 +51,11 @@ public class AVL {
                 // left left case
                 return rightRotate(node);
             }
+            if(height(node.left.left) - height(node.left.right) < 0) {
+                // left right case
+                node.left = leftRotate(node.left);
+                return rightRotate(node);
+              }
         }
 
     }
